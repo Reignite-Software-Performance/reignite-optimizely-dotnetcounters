@@ -339,7 +339,7 @@ If you experience performance issues:
 ## Support
 
 For questions or issues:
-- GitHub: https://github.com/optimizely/performance-counters
+- GitHub: https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters
 - Application Insights docs: https://docs.microsoft.com/azure/azure-monitor/app/
 
 ---

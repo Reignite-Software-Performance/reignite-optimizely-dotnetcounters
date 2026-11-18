@@ -27,6 +27,10 @@
   <!-- Include README and key documentation in package -->
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <!-- Packed because the README links to them; a relative link to a file that is not in the
+         package is a broken link on nuget.org, which renders the README from the package root. -->
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\..\NOTICE" Pack="true" PackagePath="\" />
     <None Include="..\..\docs\QUICK_REFERENCE.md" Pack="true" PackagePath="docs\" />
     <None Include="..\..\docs\USAGE_GUIDE.md" Pack="true" PackagePath="docs\" />
   </ItemGroup>
