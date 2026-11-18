@@ -1,0 +1,9 @@
+name: reignite-optimizely-dotnetcounters
+type: library
+language: csharp
+runtime: dotnet
+testing: xunit
+description: .NET runtime and ASP.NET performance counters for Optimizely CMS V11/V12/V13, delivered to Application Insights as a drop-in NuGet package.
+defaultBranch: main
+ghOrg: Reignite-Software-Performance
+created: '2026-11-18T16:16:20.276Z'
