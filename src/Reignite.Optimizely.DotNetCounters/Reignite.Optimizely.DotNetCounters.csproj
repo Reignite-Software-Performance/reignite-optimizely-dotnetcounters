@@ -18,7 +18,7 @@
     <Version>1.0.0</Version>
     <PackageVersion>1.0.0</PackageVersion>
     <PackageTags>optimizely;episerver;performance;counters;monitoring;application-insights;telemetry;reignite</PackageTags>
-    <RepositoryUrl>https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Reignite-Software-Performance/reignite-optimizely-dotnetcounters</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <IncludeContentInPack>true</IncludeContentInPack>
     <ContentTargetFolders>content;contentFiles</ContentTargetFolders>

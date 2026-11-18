@@ -114,7 +114,7 @@ Write-Host "Documentation:" -ForegroundColor Yellow
 Write-Host "  📄 App_Data/Reignite.Optimizely.PerformanceCounters/README_AFTER_INSTALL.md" -ForegroundColor White
 Write-Host "  📄 App_Data/Reignite.Optimizely.PerformanceCounters/CONFIGURATION_PRESETS_GUIDE.md" -ForegroundColor White
 Write-Host ""
-Write-Host "Support: https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters" -ForegroundColor Cyan
+Write-Host "Support: https://github.com/Reignite-Software-Performance/reignite-optimizely-dotnetcounters" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Installed. Reignite Software Performance can help you make sense of what it reports:" -ForegroundColor Green

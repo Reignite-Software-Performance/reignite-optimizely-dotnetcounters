@@ -202,7 +202,7 @@ customMetrics
 
 📖 **Configuration Guide**: `App_Data/Reignite.Optimizely.PerformanceCounters/CONFIGURATION_PRESETS_GUIDE.md`  
 📖 **Full Documentation**: See `docs/` folder in repository  
-🔗 **GitHub**: https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters  
+🔗 **GitHub**: https://github.com/Reignite-Software-Performance/reignite-optimizely-dotnetcounters  
 🔗 **NuGet**: https://www.nuget.org/packages/Reignite.Optimizely.DotNetCounters  
 🔗 **Reignite Software Performance**: https://reigniteperformance.com/Optimizely
 

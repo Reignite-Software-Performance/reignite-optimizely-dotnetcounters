@@ -261,7 +261,7 @@ Documentation:
   📄 App_Data/Reignite.Optimizely.PerformanceCounters/README_AFTER_INSTALL.md
   📄 App_Data/Reignite.Optimizely.PerformanceCounters/CONFIGURATION_PRESETS_GUIDE.md
 
-Support: https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters
+Support: https://github.com/Reignite-Software-Performance/reignite-optimizely-dotnetcounters
 ========================================
 ```
 

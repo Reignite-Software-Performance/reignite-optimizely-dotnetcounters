@@ -305,7 +305,7 @@ Apache-2.0 — see [LICENSE](LICENSE) and [NOTICE](NOTICE). Copyright (c) Reigni
 
 ## Support
 
-For issues and feature requests, please use the [GitHub issue tracker](https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters/issues).
+For issues and feature requests, please use the [GitHub issue tracker](https://github.com/Reignite-Software-Performance/reignite-optimizely-dotnetcounters/issues).
 
 For help interpreting what these counters are telling you, or for Optimizely performance work:
 
