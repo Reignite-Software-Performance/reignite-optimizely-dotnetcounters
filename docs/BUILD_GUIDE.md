@@ -47,7 +47,7 @@ dotnet build --configuration Release --framework net8.0
 
 ### Visual Studio Build
 
-1. Open `Optimizely.Performance.DotNetCounters.sln` in Visual Studio
+1. Open `Reignite.Optimizely.DotNetCounters.sln` in Visual Studio
 2. Select the desired configuration (Debug or Release)
 3. Build → Build Solution (Ctrl+Shift+B)
 
@@ -55,7 +55,7 @@ The multi-targeting project will build all three target frameworks automatically
 
 ### JetBrains Rider Build
 
-1. Open `Optimizely.Performance.DotNetCounters.sln` in Rider
+1. Open `Reignite.Optimizely.DotNetCounters.sln` in Rider
 2. Select the desired configuration from the top toolbar
 3. Build → Build Solution (Ctrl+F9)
 
@@ -128,9 +128,9 @@ To create a distributable NuGet package:
 dotnet pack --configuration Release --output ./nupkg
 
 # The resulting package will contain all three target frameworks:
-# - lib/net472/Optimizely.Performance.DotNetCounters.dll
-# - lib/net6.0/Optimizely.Performance.DotNetCounters.dll
-# - lib/net8.0/Optimizely.Performance.DotNetCounters.dll
+# - lib/net472/Reignite.Optimizely.DotNetCounters.dll
+# - lib/net6.0/Reignite.Optimizely.DotNetCounters.dll
+# - lib/net8.0/Reignite.Optimizely.DotNetCounters.dll
 ```
 
 The NuGet package will automatically select the correct DLL based on the consuming project's target framework.

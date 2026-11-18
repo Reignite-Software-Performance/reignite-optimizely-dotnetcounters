@@ -7,13 +7,13 @@ This guide provides detailed instructions on how to integrate and use Optimizely
 ### 1. Install the Package
 
 ```bash
-dotnet add package Optimizely.Performance.DotNetCounters
+dotnet add package Reignite.Optimizely.DotNetCounters
 ```
 
 Or via Package Manager Console:
 
 ```powershell
-Install-Package Optimizely.Performance.DotNetCounters
+Install-Package Reignite.Optimizely.DotNetCounters
 ```
 
 ### 2. Configure Application Insights
@@ -61,7 +61,7 @@ To use all default Windows Performance Counters, simply enable the feature in `w
   <configSections>
     <sectionGroup name="optimizely">
       <section name="performanceCounters"
-               type="Optimizely.Performance.DotNetCounters.Services.PerformanceCountersConfigSection, Optimizely.Performance.DotNetCounters" />
+               type="Reignite.Optimizely.DotNetCounters.Services.PerformanceCountersConfigSection, Reignite.Optimizely.DotNetCounters" />
     </sectionGroup>
   </configSections>
 
@@ -327,12 +327,12 @@ If you need to customize the initialization process, you can create your own ini
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
-using Optimizely.Performance.DotNetCounters.Configuration;
+using Reignite.Optimizely.DotNetCounters.Configuration;
 
 namespace MyProject.Initialization
 {
     [InitializableModule]
-    [ModuleDependency(typeof(Optimizely.Performance.DotNetCounters.Initialization.PerformanceCountersInitializationModule))]
+    [ModuleDependency(typeof(Reignite.Optimizely.DotNetCounters.Initialization.PerformanceCountersInitializationModule))]
     public class CustomPerformanceMonitoringModule : IInitializableModule
     {
         public void Initialize(InitializationEngine context)

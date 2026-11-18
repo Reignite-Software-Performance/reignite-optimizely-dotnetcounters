@@ -4,7 +4,7 @@ This guide explains the performance counter configurations for Optimizely CMS V1
 
 ## Philosophy
 
-The Optimizely.Performance.DotNetCounters package provides **comprehensive, production-ready configurations** that collect all critical metrics for website operations. These configurations are designed to:
+The Reignite.Optimizely.DotNetCounters package provides **comprehensive, production-ready configurations** that collect all critical metrics for website operations. These configurations are designed to:
 
 - ✅ Provide complete visibility into application performance
 - ✅ Capture all metrics critical to website health
@@ -16,7 +16,7 @@ The Optimizely.Performance.DotNetCounters package provides **comprehensive, prod
 
 ### Optimizely V11 (.NET Framework 4.7.2)
 
-Located in: `App_Data/Optimizely.PerformanceCounters/V11/`
+Located in: `App_Data/Reignite.Optimizely.PerformanceCounters/V11/`
 
 | File | Purpose | Counters |
 |------|---------|----------|
@@ -25,7 +25,7 @@ Located in: `App_Data/Optimizely.PerformanceCounters/V11/`
 
 ### Optimizely V12/V13 (.NET 6+)
 
-Located in: `App_Data/Optimizely.PerformanceCounters/V12-V13/`
+Located in: `App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/`
 
 | File | Purpose | Counters |
 |------|---------|----------|
@@ -153,7 +153,7 @@ Located in: `App_Data/Optimizely.PerformanceCounters/V12-V13/`
 
 ### V11 Setup
 
-1. Open `App_Data/Optimizely.PerformanceCounters/V11/web.config.xml`
+1. Open `App_Data/Reignite.Optimizely.PerformanceCounters/V11/web.config.xml`
 2. Copy the entire configuration
 3. Merge into your `web.config`:
    ```xml
@@ -179,7 +179,7 @@ Located in: `App_Data/Optimizely.PerformanceCounters/V12-V13/`
 
 ### V12/V13 Setup
 
-1. Open `App_Data/Optimizely.PerformanceCounters/V12-V13/appsettings.json`
+1. Open `App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/appsettings.json`
 2. Copy the configuration
 3. Merge into your `appsettings.json`:
    ```json

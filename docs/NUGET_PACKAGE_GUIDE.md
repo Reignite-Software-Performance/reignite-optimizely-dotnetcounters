@@ -1,24 +1,24 @@
 # NuGet Package Structure Guide
 
-This document explains how the Optimizely.Performance.DotNetCounters NuGet package is structured and how configuration templates are delivered to consuming projects.
+This document explains how the Reignite.Optimizely.DotNetCounters NuGet package is structured and how configuration templates are delivered to consuming projects.
 
 ## Package Structure
 
 When built, the NuGet package contains the following structure:
 
 ```
-Optimizely.Performance.DotNetCounters.1.0.0.nupkg
+Reignite.Optimizely.DotNetCounters.1.0.0.nupkg
 ├── lib/
 │   ├── net472/
-│   │   └── Optimizely.Performance.DotNetCounters.dll     (.NET Framework build)
+│   │   └── Reignite.Optimizely.DotNetCounters.dll     (.NET Framework build)
 │   ├── net6.0/
-│   │   └── Optimizely.Performance.DotNetCounters.dll     (.NET 6 build)
+│   │   └── Reignite.Optimizely.DotNetCounters.dll     (.NET 6 build)
 │   └── net8.0/
-│       └── Optimizely.Performance.DotNetCounters.dll     (.NET 8 build)
+│       └── Reignite.Optimizely.DotNetCounters.dll     (.NET 8 build)
 │
 ├── content/
 │   └── App_Data/
-│       └── Optimizely.PerformanceCounters/
+│       └── Reignite.Optimizely.PerformanceCounters/
 │           ├── V11/
 │           │   ├── web.config.production
 │           │   ├── web.config.development
@@ -36,11 +36,11 @@ Optimizely.Performance.DotNetCounters.1.0.0.nupkg
 │   └── any/
 │       └── any/
 │           └── App_Data/
-│               └── Optimizely.PerformanceCounters/
+│               └── Reignite.Optimizely.PerformanceCounters/
 │                   └── (same as content/)
 │
 ├── build/
-│   └── Optimizely.Performance.DotNetCounters.targets   (MSBuild integration)
+│   └── Reignite.Optimizely.DotNetCounters.targets   (MSBuild integration)
 │
 ├── tools/
 │   └── install.ps1                                      (PowerShell install script)
@@ -63,11 +63,11 @@ When a project installs the package:
 
 **Legacy projects (packages.config)**:
 - Files from `content/` are copied directly into the project
-- Path: `YourProject/App_Data/Optimizely.PerformanceCounters/`
+- Path: `YourProject/App_Data/Reignite.Optimizely.PerformanceCounters/`
 
 **Modern projects (PackageReference)**:
 - Files from `contentFiles/` are linked into the project (not copied by default)
-- Path: `YourProject/App_Data/Optimizely.PerformanceCounters/`
+- Path: `YourProject/App_Data/Reignite.Optimizely.PerformanceCounters/`
 - Can be accessed in Solution Explorer under the project
 
 ### Incremental Addition
@@ -83,12 +83,12 @@ The configuration templates are **additive** - they:
 
 1. **Developer installs package**:
    ```bash
-   dotnet add package Optimizely.Performance.DotNetCounters
+   dotnet add package Reignite.Optimizely.DotNetCounters
    ```
 
 2. **NuGet adds configuration templates** to:
    ```
-   YourProject/App_Data/Optimizely.PerformanceCounters/
+   YourProject/App_Data/Reignite.Optimizely.PerformanceCounters/
    ```
 
 3. **Developer chooses a preset** based on:
@@ -113,7 +113,7 @@ The configuration templates are **additive** - they:
 
 ### MSBuild Targets
 
-The `build/Optimizely.Performance.DotNetCounters.targets` file is automatically imported into consuming projects.
+The `build/Reignite.Optimizely.DotNetCounters.targets` file is automatically imported into consuming projects.
 
 **What it does**:
 - Displays informational message after build
@@ -126,7 +126,7 @@ The `build/Optimizely.Performance.DotNetCounters.targets` file is automatically 
 Optimizely Performance Counters
 ========================================
 Configuration templates available at:
-  App_Data\Optimizely.PerformanceCounters\
+  App_Data\Reignite.Optimizely.PerformanceCounters\
 
 See README_AFTER_INSTALL.md for setup instructions.
 ========================================
@@ -167,7 +167,7 @@ Templates are designed to be **reference material**, not auto-configured:
 All presets exist **side-by-side** in the same folder:
 
 ```
-App_Data/Optimizely.PerformanceCounters/
+App_Data/Reignite.Optimizely.PerformanceCounters/
   ├── V11/
   │   ├── web.config.production          ← Production preset
   │   ├── web.config.development         ← Development preset
@@ -205,11 +205,11 @@ Copy the template as an environment-specific file:
 
 ```bash
 # Production
-cp App_Data/Optimizely.PerformanceCounters/V12-V13/appsettings.Production.json \
+cp App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/appsettings.Production.json \
    appsettings.Production.json
 
 # Development
-cp App_Data/Optimizely.PerformanceCounters/V12-V13/appsettings.Development.json \
+cp App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/appsettings.Development.json \
    appsettings.Development.json
 ```
 
@@ -253,7 +253,7 @@ dotnet build --configuration Release
 dotnet pack --configuration Release --output ./nupkg
 
 # Result: 
-# ./nupkg/Optimizely.Performance.DotNetCounters.1.0.0.nupkg
+# ./nupkg/Reignite.Optimizely.DotNetCounters.1.0.0.nupkg
 ```
 
 ## Verifying Package Contents
@@ -262,7 +262,7 @@ To inspect the package contents:
 
 ```bash
 # Extract .nupkg (it's a ZIP file)
-unzip Optimizely.Performance.DotNetCounters.1.0.0.nupkg -d extracted/
+unzip Reignite.Optimizely.DotNetCounters.1.0.0.nupkg -d extracted/
 
 # Or use NuGet Package Explorer (Windows)
 # https://github.com/NuGetPackageExplorer/NuGetPackageExplorer
@@ -282,7 +282,7 @@ Check that:
 # Create API key at nuget.org
 
 # Push package
-dotnet nuget push ./nupkg/Optimizely.Performance.DotNetCounters.1.0.0.nupkg \
+dotnet nuget push ./nupkg/Reignite.Optimizely.DotNetCounters.1.0.0.nupkg \
   --api-key YOUR_API_KEY \
   --source https://api.nuget.org/v3/index.json
 ```
@@ -290,7 +290,7 @@ dotnet nuget push ./nupkg/Optimizely.Performance.DotNetCounters.1.0.0.nupkg \
 ## Best Practices for Consuming Projects
 
 1. **After installation**:
-   - Read `App_Data/Optimizely.PerformanceCounters/README_AFTER_INSTALL.md`
+   - Read `App_Data/Reignite.Optimizely.PerformanceCounters/README_AFTER_INSTALL.md`
    - Review available presets in the folder
 
 2. **Choose preset**:
@@ -319,13 +319,13 @@ dotnet nuget push ./nupkg/Optimizely.Performance.DotNetCounters.1.0.0.nupkg \
 
 **Solution**: Templates are still there, just check the file system:
 ```bash
-dir App_Data\Optimizely.PerformanceCounters
+dir App_Data\Reignite.Optimizely.PerformanceCounters
 ```
 
 Or add to your project explicitly:
 ```xml
 <ItemGroup>
-  <None Include="App_Data\Optimizely.PerformanceCounters\**\*.*" />
+  <None Include="App_Data\Reignite.Optimizely.PerformanceCounters\**\*.*" />
 </ItemGroup>
 ```
 
@@ -338,7 +338,7 @@ Or add to your project explicitly:
 Or explicitly exclude:
 ```xml
 <ItemGroup>
-  <Content Remove="App_Data\Optimizely.PerformanceCounters\**\*.*" />
+  <Content Remove="App_Data\Reignite.Optimizely.PerformanceCounters\**\*.*" />
 </ItemGroup>
 ```
 

@@ -1,6 +1,6 @@
 # Architecture Diagram
 
-This document provides visual representations of the Optimizely.Performance.DotNetCounters architecture.
+This document provides visual representations of the Reignite.Optimizely.DotNetCounters architecture.
 
 ## Component Architecture
 

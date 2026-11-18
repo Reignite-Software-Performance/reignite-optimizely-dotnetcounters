@@ -5,18 +5,20 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Authors>Optimizely</Authors>
-    <Company>Optimizely</Company>
-    <Product>Optimizely Performance Counters</Product>
-    <Description>Performance counters integration for Optimizely CMS V11, V12, and V13 supporting both .NET Framework and .NET Core+. Includes configuration templates for all scenarios.</Description>
-    <PackageProjectUrl>https://github.com/optimizely</PackageProjectUrl>
+    <PackageId>Reignite.Optimizely.DotNetCounters</PackageId>
+    <Authors>Reignite Software Performance</Authors>
+    <Company>Reignite Software Performance</Company>
+    <Product>Reignite Optimizely Performance Counters</Product>
+    <Copyright>Copyright (c) Reignite Software Performance</Copyright>
+    <Description>.NET runtime and ASP.NET performance counters for Optimizely CMS V11, V12 and V13, delivered to Application Insights with no code changes. By Reignite Software Performance - https://reigniteperformance.com/Optimizely</Description>
+    <PackageProjectUrl>https://reigniteperformance.com/Optimizely</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <NoWarn>$(NoWarn);NU1603;NU1605</NoWarn>
     <Version>1.0.0</Version>
     <PackageVersion>1.0.0</PackageVersion>
-    <PackageTags>optimizely;episerver;performance;counters;monitoring;application-insights;telemetry</PackageTags>
-    <RepositoryUrl>https://github.com/optimizely/performance-counters</RepositoryUrl>
+    <PackageTags>optimizely;episerver;performance;counters;monitoring;application-insights;telemetry;reignite</PackageTags>
+    <RepositoryUrl>https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <IncludeContentInPack>true</IncludeContentInPack>
     <ContentTargetFolders>content;contentFiles</ContentTargetFolders>
@@ -32,7 +34,7 @@
   <!-- Content files - Configuration templates for .NET Framework (V11) -->
   <ItemGroup>
     <!-- Main config file - goes to project root -->
-    <Content Include="..\..\examples\V11\Optimizely.PerformanceCounters.config">
+    <Content Include="..\..\examples\V11\Reignite.Optimizely.PerformanceCounters.config">
       <Pack>true</Pack>
       <PackagePath>content\;contentFiles\any\any\</PackagePath>
       <BuildAction>None</BuildAction>
@@ -40,9 +42,9 @@
     </Content>
 
     <!-- Documentation/reference files - go to App_Data -->
-    <Content Include="..\..\examples\V11\*.config" Exclude="..\..\examples\V11\Optimizely.PerformanceCounters.config">
+    <Content Include="..\..\examples\V11\*.config" Exclude="..\..\examples\V11\Reignite.Optimizely.PerformanceCounters.config">
       <Pack>true</Pack>
-      <PackagePath>content\App_Data\Optimizely.PerformanceCounters\V11\;contentFiles\any\any\App_Data\Optimizely.PerformanceCounters\V11\</PackagePath>
+      <PackagePath>content\App_Data\Reignite.Optimizely.PerformanceCounters\V11\;contentFiles\any\any\App_Data\Reignite.Optimizely.PerformanceCounters\V11\</PackagePath>
       <BuildAction>None</BuildAction>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
@@ -50,7 +52,7 @@
     <!-- XML snippet for web.config setup -->
     <Content Include="..\..\examples\V11\web.config.snippet.xml">
       <Pack>true</Pack>
-      <PackagePath>content\App_Data\Optimizely.PerformanceCounters\V11\;contentFiles\any\any\App_Data\Optimizely.PerformanceCounters\V11\</PackagePath>
+      <PackagePath>content\App_Data\Reignite.Optimizely.PerformanceCounters\V11\;contentFiles\any\any\App_Data\Reignite.Optimizely.PerformanceCounters\V11\</PackagePath>
       <BuildAction>None</BuildAction>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
@@ -60,7 +62,7 @@
   <ItemGroup>
     <Content Include="..\..\examples\V12-V13\*.json">
       <Pack>true</Pack>
-      <PackagePath>contentFiles\any\any\App_Data\Optimizely.PerformanceCounters\V12-V13\;content\App_Data\Optimizely.PerformanceCounters\V12-V13\</PackagePath>
+      <PackagePath>contentFiles\any\any\App_Data\Reignite.Optimizely.PerformanceCounters\V12-V13\;content\App_Data\Reignite.Optimizely.PerformanceCounters\V12-V13\</PackagePath>
       <BuildAction>None</BuildAction>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
@@ -70,17 +72,17 @@
   <ItemGroup>
     <None Include="..\..\docs\CONFIGURATION_PRESETS_GUIDE.md">
       <Pack>true</Pack>
-      <PackagePath>content\App_Data\Optimizely.PerformanceCounters\;contentFiles\any\any\App_Data\Optimizely.PerformanceCounters\</PackagePath>
+      <PackagePath>content\App_Data\Reignite.Optimizely.PerformanceCounters\;contentFiles\any\any\App_Data\Reignite.Optimizely.PerformanceCounters\</PackagePath>
     </None>
     <None Include="..\..\examples\README_AFTER_INSTALL.md">
       <Pack>true</Pack>
-      <PackagePath>content\App_Data\Optimizely.PerformanceCounters\;contentFiles\any\any\App_Data\Optimizely.PerformanceCounters\</PackagePath>
+      <PackagePath>content\App_Data\Reignite.Optimizely.PerformanceCounters\;contentFiles\any\any\App_Data\Reignite.Optimizely.PerformanceCounters\</PackagePath>
     </None>
   </ItemGroup>
 
   <!-- Include build targets and install script -->
   <ItemGroup>
-    <None Include="..\..\build\Optimizely.Performance.DotNetCounters.targets">
+    <None Include="..\..\build\Reignite.Optimizely.DotNetCounters.targets">
       <Pack>true</Pack>
       <PackagePath>build\</PackagePath>
     </None>

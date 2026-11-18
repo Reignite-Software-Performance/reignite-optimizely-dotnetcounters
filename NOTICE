@@ -1,0 +1,26 @@
+Reignite.Optimizely.DotNetCounters
+Copyright (c) Reignite Software Performance
+https://reigniteperformance.com/Optimizely
+
+This product includes software derived from Optimizely.Performance.DotNetCounters
+(https://github.com/jeff-fischer-optimizely/Optimizely.Performance.DotNetCounters),
+which was published under the Apache License, Version 2.0. The original copyright
+and license notices are retained below.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Optimizely and EPiServer are trademarks of Optimizely, Inc. This package is an
+independent product of Reignite Software Performance and is not published,
+sponsored or endorsed by Optimizely, Inc. The counter names this package emits
+(the "Optimizely.CMS.*", "Optimizely.Runtime.*" and "Optimizely.Commerce.*"
+series) name the product being instrumented, not the publisher of the package.

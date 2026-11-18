@@ -6,13 +6,13 @@ using EPiServer.ServiceLocation;
 
 #if NET472
 using Microsoft.Extensions.Configuration;
-using Optimizely.Performance.DotNetCounters.Services;
+using Reignite.Optimizely.DotNetCounters.Services;
 #else
 using Microsoft.Extensions.DependencyInjection;
-using Optimizely.Performance.DotNetCounters.Services;
+using Reignite.Optimizely.DotNetCounters.Services;
 #endif
 
-namespace Optimizely.Performance.DotNetCounters.Initialization
+namespace Reignite.Optimizely.DotNetCounters.Initialization
 {
     /// <summary>
     /// Initialization module for Optimizely Performance Counters.

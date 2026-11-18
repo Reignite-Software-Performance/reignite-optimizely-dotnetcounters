@@ -1,25 +1,25 @@
-# Optimizely Performance Counters - Quick Start
+# Reignite Optimizely Performance Counters - Quick Start
 
-Thank you for installing **Optimizely.Performance.DotNetCounters**!
+Thank you for installing **Reignite.Optimizely.DotNetCounters**!
 
 ## Files Added to Your Project
 
 ### For Optimizely V11 (.NET Framework 4.7.2)
 
 **In your project root:**
-- ✅ `Optimizely.PerformanceCounters.config` - **Main configuration file** (28 counters)
+- ✅ `Reignite.Optimizely.PerformanceCounters.config` - **Main configuration file** (28 counters)
 
-**In App_Data/Optimizely.PerformanceCounters/V11/:**
+**In App_Data/Reignite.Optimizely.PerformanceCounters/V11/:**
 - 📄 `web.config.snippet.xml` - Lines to add to your web.config
 - 📄 `web.Development.config` - Transform to disable in development
 
 ### For Optimizely V12/V13 (.NET 6+)
 
-**In App_Data/Optimizely.PerformanceCounters/V12-V13/:**
+**In App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/:**
 - 📄 `appsettings.json` - Complete configuration (41 counters)
 - 📄 `appsettings.Development.json` - Override to disable in development
 
-**In App_Data/Optimizely.PerformanceCounters/:**
+**In App_Data/Reignite.Optimizely.PerformanceCounters/:**
 - 📄 `CONFIGURATION_PRESETS_GUIDE.md` - Complete reference guide
 
 ---
@@ -28,7 +28,7 @@ Thank you for installing **Optimizely.Performance.DotNetCounters**!
 
 ### Optimizely V11 (.NET Framework) - 3 Steps
 
-The main configuration file `Optimizely.PerformanceCounters.config` is already in your project!
+The main configuration file `Reignite.Optimizely.PerformanceCounters.config` is already in your project!
 
 **Step 1: Add configSection to web.config**
 
@@ -40,7 +40,7 @@ Find `<configSections>` in your web.config and add:
   
   <sectionGroup name="optimizely">
     <section name="performanceCounters"
-             type="Optimizely.Performance.DotNetCounters.Services.PerformanceCountersConfigSection, Optimizely.Performance.DotNetCounters" />
+             type="Reignite.Optimizely.DotNetCounters.Services.PerformanceCountersConfigSection, Reignite.Optimizely.DotNetCounters" />
   </sectionGroup>
 </configSections>
 ```
@@ -51,7 +51,7 @@ Add this anywhere inside `<configuration>`:
 
 ```xml
 <optimizely>
-  <performanceCounters configSource="Optimizely.PerformanceCounters.config" />
+  <performanceCounters configSource="Reignite.Optimizely.PerformanceCounters.config" />
 </optimizely>
 ```
 
@@ -71,7 +71,7 @@ Add this anywhere inside `<configuration>`:
 
 **💡 Optional: Disable in Development**
 
-Copy `App_Data/Optimizely.PerformanceCounters/V11/web.Development.config` to your project root as `web.Debug.config`
+Copy `App_Data/Reignite.Optimizely.PerformanceCounters/V11/web.Development.config` to your project root as `web.Debug.config`
 
 **📄 Need help?** See `web.config.snippet.xml` for a complete example
 
@@ -81,7 +81,7 @@ Copy `App_Data/Optimizely.PerformanceCounters/V11/web.Development.config` to you
 
 **Step 1: Merge configuration**
 
-Open `App_Data/Optimizely.PerformanceCounters/V12-V13/appsettings.json` and copy the content into your project's `appsettings.json`:
+Open `App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/appsettings.json` and copy the content into your project's `appsettings.json`:
 
 ```json
 {
@@ -150,11 +150,11 @@ Copy `appsettings.Development.json` to your project root:
 ## Using configSource Benefits (V11)
 
 ✅ **Clean separation** - Config separate from web.config  
-✅ **Easy updates** - Update `Optimizely.PerformanceCounters.config` without touching web.config  
+✅ **Easy updates** - Update `Reignite.Optimizely.PerformanceCounters.config` without touching web.config  
 ✅ **Version control friendly** - Easy to see what changed  
 ✅ **Reusable** - Share config across projects  
 
-To customize counters, just edit `Optimizely.PerformanceCounters.config` - no web.config changes needed!
+To customize counters, just edit `Reignite.Optimizely.PerformanceCounters.config` - no web.config changes needed!
 
 ---
 
@@ -191,7 +191,7 @@ customMetrics
 3. Verify `enabled="true"` in configuration
 4. Check Debug output for errors
 
-**V11: Can't find Optimizely.PerformanceCounters.config?**
+**V11: Can't find Reignite.Optimizely.PerformanceCounters.config?**
 - It should be in your project root (same directory as web.config)
 - Check Solution Explorer → Show All Files
 - Ensure it's included in the project
@@ -200,12 +200,19 @@ customMetrics
 
 ## Documentation
 
-📖 **Configuration Guide**: `App_Data/Optimizely.PerformanceCounters/CONFIGURATION_PRESETS_GUIDE.md`  
+📖 **Configuration Guide**: `App_Data/Reignite.Optimizely.PerformanceCounters/CONFIGURATION_PRESETS_GUIDE.md`  
 📖 **Full Documentation**: See `docs/` folder in repository  
-🔗 **GitHub**: https://github.com/optimizely/performance-counters  
-🔗 **NuGet**: https://www.nuget.org/packages/Optimizely.Performance.DotNetCounters
+🔗 **GitHub**: https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters  
+🔗 **NuGet**: https://www.nuget.org/packages/Reignite.Optimizely.DotNetCounters  
+🔗 **Reignite Software Performance**: https://reigniteperformance.com/Optimizely
 
 ---
 
 **Version**: 1.0.0  
-**License**: Apache-2.0
+**License**: Apache-2.0, Copyright (c) Reignite Software Performance
+
+---
+
+**Installed.** Reignite Software Performance builds and maintains this package, and it is free to use.
+If you would rather have someone read the charts with you — or instrument a site that cannot take a
+package — see https://reigniteperformance.com/Optimizely or https://reigniteperformance.com/contact.

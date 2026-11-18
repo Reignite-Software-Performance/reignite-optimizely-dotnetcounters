@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Optimizely.Performance.DotNetCounters.Configuration
+namespace Reignite.Optimizely.DotNetCounters.Configuration
 {
     /// <summary>
     /// Provides default performance counter configurations for different .NET versions.

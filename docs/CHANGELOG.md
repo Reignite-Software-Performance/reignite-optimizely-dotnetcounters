@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Optimizely.Performance.DotNetCounters project will be documented in this file.
+All notable changes to the Reignite.Optimizely.DotNetCounters project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -68,7 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Zero-configuration option (works out of the box)
 
 ### Package Information
-- **Package ID**: Optimizely.Performance.DotNetCounters
+- **Package ID**: Reignite.Optimizely.DotNetCounters
 - **License**: Apache-2.0
 - **Target Frameworks**: net472, net6.0, net8.0
 - **Dependencies**: Microsoft.ApplicationInsights, Optimizely packages
@@ -107,7 +107,7 @@ Simply install the package and add Application Insights configuration. The libra
 ### From Custom Performance Counter Implementation
 
 1. Remove your custom performance counter initialization code
-2. Install Optimizely.Performance.DotNetCounters
+2. Install Reignite.Optimizely.DotNetCounters
 3. Migrate your counter configuration to the new format
 4. Test in staging to verify all desired counters are being collected
 

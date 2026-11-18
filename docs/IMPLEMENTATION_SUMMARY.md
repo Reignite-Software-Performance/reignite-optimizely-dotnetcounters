@@ -1,10 +1,10 @@
 # Implementation Summary
 
-This document provides a complete overview of the Optimizely.Performance.DotNetCounters library implementation.
+This document provides a complete overview of the Reignite.Optimizely.DotNetCounters library implementation.
 
 ## Project Overview
 
-**Namespace**: `Optimizely.Performance.DotNetCounters`  
+**Namespace**: `Reignite.Optimizely.DotNetCounters`  
 **Target Platforms**: .NET Framework 4.7.2, .NET 6, .NET 8  
 **Optimizely Versions**: V11, V12, V13  
 **License**: Apache-2.0
@@ -24,7 +24,7 @@ This document provides a complete overview of the Optimizely.Performance.DotNetC
 ### Project Structure
 
 ```
-Optimizely.Performance.DotNetCounters/
+Reignite.Optimizely.DotNetCounters/
 ├── Configuration/
 │   ├── PerformanceCounterOptions.cs      # Configuration model (multi-targeted)
 │   └── DefaultCounters.cs                # Default counter definitions (platform-specific)
@@ -361,7 +361,7 @@ catch (Exception ex)
 ## Deployment Checklist
 
 - [ ] Add Optimizely NuGet feed to `nuget.config`
-- [ ] Install `Optimizely.Performance.DotNetCounters` package
+- [ ] Install `Reignite.Optimizely.DotNetCounters` package
 - [ ] Configure Application Insights instrumentation key
 - [ ] (Optional) Customize performance counters in configuration
 - [ ] Deploy to staging and verify metrics appear in Application Insights

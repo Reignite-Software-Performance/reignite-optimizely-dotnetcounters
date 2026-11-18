@@ -7,9 +7,9 @@ using Microsoft.ApplicationInsights.Extensibility.EventCounterCollector;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Optimizely.Performance.DotNetCounters.Configuration;
+using Reignite.Optimizely.DotNetCounters.Configuration;
 
-namespace Optimizely.Performance.DotNetCounters.Services
+namespace Reignite.Optimizely.DotNetCounters.Services
 {
     /// <summary>
     /// Service for initializing Event Counters on .NET Core and later.

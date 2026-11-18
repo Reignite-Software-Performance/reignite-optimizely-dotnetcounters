@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-dotnet add package Optimizely.Performance.DotNetCounters
+dotnet add package Reignite.Optimizely.DotNetCounters
 ```
 
 ## Configuration (Optional - works with defaults)
@@ -18,7 +18,7 @@ Add to `web.config`:
 <configSections>
   <sectionGroup name="optimizely">
     <section name="performanceCounters" 
-             type="Optimizely.Performance.DotNetCounters.Services.PerformanceCountersConfigSection, Optimizely.Performance.DotNetCounters" />
+             type="Reignite.Optimizely.DotNetCounters.Services.PerformanceCountersConfigSection, Reignite.Optimizely.DotNetCounters" />
   </sectionGroup>
 </configSections>
 

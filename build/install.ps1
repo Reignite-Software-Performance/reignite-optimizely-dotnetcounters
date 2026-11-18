@@ -1,9 +1,9 @@
-# Optimizely.Performance.DotNetCounters - Post-Install Script
+# Reignite.Optimizely.DotNetCounters - Post-Install Script
 param($installPath, $toolsPath, $package, $project)
 
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host " Optimizely Performance Counters" -ForegroundColor Cyan
+Write-Host " Reignite Optimizely Performance Counters" -ForegroundColor Cyan
 Write-Host " Version: 1.0.0" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
@@ -28,8 +28,8 @@ if ($isNetFramework) {
     Write-Host "📋 .NET Framework Project Detected (Optimizely V11)" -ForegroundColor Yellow
     Write-Host ""
     Write-Host "Configuration files added to your project:" -ForegroundColor White
-    Write-Host "  ✅ Optimizely.PerformanceCounters.config (28 counters)" -ForegroundColor Green
-    Write-Host "  📄 App_Data/Optimizely.PerformanceCounters/ (documentation)" -ForegroundColor Gray
+    Write-Host "  ✅ Reignite.Optimizely.PerformanceCounters.config (28 counters)" -ForegroundColor Green
+    Write-Host "  📄 App_Data/Reignite.Optimizely.PerformanceCounters/ (documentation)" -ForegroundColor Gray
     Write-Host ""
 
     # Check if web.config already has the configuration
@@ -51,12 +51,12 @@ if ($isNetFramework) {
         Write-Host "  1. Inside <configSections>:" -ForegroundColor Gray
         Write-Host "     <sectionGroup name=`"optimizely`">" -ForegroundColor Cyan
         Write-Host "       <section name=`"performanceCounters`"" -ForegroundColor Cyan
-        Write-Host "                type=`"Optimizely.Performance.DotNetCounters.Services.PerformanceCountersConfigSection, Optimizely.Performance.DotNetCounters`" />" -ForegroundColor Cyan
+        Write-Host "                type=`"Reignite.Optimizely.DotNetCounters.Services.PerformanceCountersConfigSection, Reignite.Optimizely.DotNetCounters`" />" -ForegroundColor Cyan
         Write-Host "     </sectionGroup>" -ForegroundColor Cyan
         Write-Host ""
         Write-Host "  2. Inside <configuration>:" -ForegroundColor Gray
         Write-Host "     <optimizely>" -ForegroundColor Cyan
-        Write-Host "       <performanceCounters configSource=`"Optimizely.PerformanceCounters.config`" />" -ForegroundColor Cyan
+        Write-Host "       <performanceCounters configSource=`"Reignite.Optimizely.PerformanceCounters.config`" />" -ForegroundColor Cyan
         Write-Host "     </optimizely>" -ForegroundColor Cyan
         Write-Host ""
         Write-Host "  3. Configure Application Insights:" -ForegroundColor Gray
@@ -76,13 +76,13 @@ else {
     Write-Host "📋 .NET 6+ Project Detected (Optimizely V12/V13)" -ForegroundColor Yellow
     Write-Host ""
     Write-Host "Configuration files added:" -ForegroundColor White
-    Write-Host "  📄 App_Data/Optimizely.PerformanceCounters/V12-V13/" -ForegroundColor Gray
+    Write-Host "  📄 App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/" -ForegroundColor Gray
     Write-Host "     - appsettings.json (41 counters)" -ForegroundColor Green
     Write-Host "     - appsettings.Development.json (disable override)" -ForegroundColor Green
     Write-Host ""
     Write-Host "⚙️  SETUP REQUIRED:" -ForegroundColor Yellow
     Write-Host ""
-    Write-Host "1. Copy App_Data/Optimizely.PerformanceCounters/V12-V13/appsettings.json" -ForegroundColor White
+    Write-Host "1. Copy App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/appsettings.json" -ForegroundColor White
     Write-Host "   content into your project's appsettings.json" -ForegroundColor White
     Write-Host ""
     Write-Host "2. (Optional) Copy appsettings.Development.json to disable locally" -ForegroundColor White
@@ -111,9 +111,12 @@ else {
 Write-Host ""
 
 Write-Host "Documentation:" -ForegroundColor Yellow
-Write-Host "  📄 App_Data/Optimizely.PerformanceCounters/README_AFTER_INSTALL.md" -ForegroundColor White
-Write-Host "  📄 App_Data/Optimizely.PerformanceCounters/CONFIGURATION_PRESETS_GUIDE.md" -ForegroundColor White
+Write-Host "  📄 App_Data/Reignite.Optimizely.PerformanceCounters/README_AFTER_INSTALL.md" -ForegroundColor White
+Write-Host "  📄 App_Data/Reignite.Optimizely.PerformanceCounters/CONFIGURATION_PRESETS_GUIDE.md" -ForegroundColor White
 Write-Host ""
-Write-Host "Support: https://github.com/optimizely/performance-counters" -ForegroundColor Cyan
+Write-Host "Support: https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
+Write-Host ""
+Write-Host "Installed. Reignite Software Performance can help you make sense of what it reports:" -ForegroundColor Green
+Write-Host "  https://reigniteperformance.com/Optimizely" -ForegroundColor Green
 Write-Host ""

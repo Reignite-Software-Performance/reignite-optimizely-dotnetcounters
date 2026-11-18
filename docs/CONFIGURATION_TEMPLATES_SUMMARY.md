@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Optimizely.Performance.DotNetCounters NuGet package now includes comprehensive configuration templates that are **automatically added** to consuming projects upon installation.
+The Reignite.Optimizely.DotNetCounters NuGet package now includes comprehensive configuration templates that are **automatically added** to consuming projects upon installation.
 
 ## What's Included
 
@@ -10,7 +10,7 @@ The Optimizely.Performance.DotNetCounters NuGet package now includes comprehensi
 
 #### Optimizely V11 (.NET Framework 4.7.2)
 
-Located in: `App_Data/Optimizely.PerformanceCounters/V11/`
+Located in: `App_Data/Reignite.Optimizely.PerformanceCounters/V11/`
 
 | File | Counters | Purpose |
 |------|----------|---------|
@@ -28,7 +28,7 @@ Located in: `App_Data/Optimizely.PerformanceCounters/V11/`
 
 #### Optimizely V12/V13 (.NET 6+)
 
-Located in: `App_Data/Optimizely.PerformanceCounters/V12-V13/`
+Located in: `App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/`
 
 | File | Counters | Purpose |
 |------|----------|---------|
@@ -55,7 +55,7 @@ Located in: `App_Data/Optimizely.PerformanceCounters/V12-V13/`
 
 | File | Purpose |
 |------|---------|
-| `build/Optimizely.Performance.DotNetCounters.targets` | MSBuild integration, post-build messages |
+| `build/Reignite.Optimizely.DotNetCounters.targets` | MSBuild integration, post-build messages |
 | `tools/install.ps1` | PowerShell script for packages.config installations |
 
 ## How It Works
@@ -66,7 +66,7 @@ Located in: `App_Data/Optimizely.PerformanceCounters/V12-V13/`
 1. Developer installs NuGet package
    ↓
 2. NuGet adds configuration templates to:
-   App_Data/Optimizely.PerformanceCounters/
+   App_Data/Reignite.Optimizely.PerformanceCounters/
    ↓
 3. MSBuild displays guidance message
    ↓
@@ -101,10 +101,10 @@ Located in: `App_Data/Optimizely.PerformanceCounters/V12-V13/`
 
 ```bash
 # 1. Install package
-dotnet add package Optimizely.Performance.DotNetCounters
+dotnet add package Reignite.Optimizely.DotNetCounters
 
 # 2. Copy production preset
-cp App_Data/Optimizely.PerformanceCounters/V12-V13/appsettings.Production.json \
+cp App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/appsettings.Production.json \
    appsettings.Production.json
 
 # 3. Edit and add your Application Insights connection string
@@ -118,7 +118,7 @@ code appsettings.Production.json
 ```xml
 <!-- 1. Install package via NuGet Package Manager -->
 
-<!-- 2. Open App_Data/Optimizely.PerformanceCounters/V11/web.config.development -->
+<!-- 2. Open App_Data/Reignite.Optimizely.PerformanceCounters/V11/web.config.development -->
 
 <!-- 3. Copy the <optimizely> section -->
 
@@ -144,7 +144,7 @@ code appsettings.Production.json
 # 1. Already have package installed
 
 # 2. Copy memory diagnostics preset
-cp App_Data/Optimizely.PerformanceCounters/V12-V13/appsettings.MemoryDiagnostics.json \
+cp App_Data/Reignite.Optimizely.PerformanceCounters/V12-V13/appsettings.MemoryDiagnostics.json \
    appsettings.Staging.json
 
 # 3. Deploy to staging
@@ -194,7 +194,7 @@ examples/
 
 ```
 build/
-├── Optimizely.Performance.DotNetCounters.targets (MSBuild integration)
+├── Reignite.Optimizely.DotNetCounters.targets (MSBuild integration)
 └── install.ps1                                    (PowerShell script)
 ```
 
@@ -203,18 +203,18 @@ build/
 When packed, the package includes:
 
 ```
-Optimizely.Performance.DotNetCounters.1.0.0.nupkg
+Reignite.Optimizely.DotNetCounters.1.0.0.nupkg
 ├── lib/
 │   ├── net472/*.dll
 │   ├── net6.0/*.dll
 │   └── net8.0/*.dll
-├── content/App_Data/Optimizely.PerformanceCounters/
+├── content/App_Data/Reignite.Optimizely.PerformanceCounters/
 │   ├── V11/ (3 templates)
 │   ├── V12-V13/ (5 templates)
 │   ├── CONFIGURATION_PRESETS_GUIDE.md
 │   └── README_AFTER_INSTALL.md
 ├── contentFiles/any/any/App_Data/... (same as content/)
-├── build/Optimizely.Performance.DotNetCounters.targets
+├── build/Reignite.Optimizely.DotNetCounters.targets
 └── tools/install.ps1
 ```
 

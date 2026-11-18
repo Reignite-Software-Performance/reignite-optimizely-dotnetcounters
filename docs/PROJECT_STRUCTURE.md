@@ -7,7 +7,7 @@ This document explains the architecture and organization of the Optimizely Perfo
 ```
 OptiDotNetCounters/
 ├── src/
-│   └── Optimizely.Performance.DotNetCounters/
+│   └── Reignite.Optimizely.DotNetCounters/
 │       ├── Configuration/
 │       │   ├── PerformanceCounterOptions.cs    # Configuration models
 │       │   └── DefaultCounters.cs              # Default counter definitions
@@ -16,11 +16,11 @@ OptiDotNetCounters/
 │       │   └── EventCounterService.cs          # .NET Core+ service
 │       ├── Initialization/
 │       │   └── PerformanceCountersInitializationModule.cs  # Optimizely module
-│       └── Optimizely.Performance.DotNetCounters.csproj
+│       └── Reignite.Optimizely.DotNetCounters.csproj
 ├── examples/
 │   ├── web.config.example          # .NET Framework configuration example
 │   └── appsettings.json.example    # .NET Core+ configuration example
-├── Optimizely.Performance.DotNetCounters.sln
+├── Reignite.Optimizely.DotNetCounters.sln
 ├── README.md
 └── PROJECT_STRUCTURE.md
 ```

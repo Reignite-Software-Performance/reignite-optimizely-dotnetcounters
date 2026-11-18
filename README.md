@@ -1,4 +1,6 @@
-# Optimizely Performance Counters
+# Reignite Optimizely Performance Counters
+
+> **Reignite Software Performance** builds and maintains this package. It is free to use. If you would rather have someone read the charts with you, or instrument a site that cannot take a package, see [reigniteperformance.com/Optimizely](https://reigniteperformance.com/Optimizely).
 
 Application Insights tells you a great deal about your Optimizely site's *requests* and almost nothing about the *process serving them*. When the site slows down, the question you actually need answered — is this garbage collection, thread pool starvation, lock contention, a large object heap that never shrinks, or plain CPU exhaustion? — is answered by .NET runtime counters, and the Application Insights SDK does not collect most of them by default.
 
@@ -97,7 +99,7 @@ Counter collection runs on a background thread on a 60-second interval, failed r
 1. Add the NuGet package to your Optimizely project:
 
 ```bash
-dotnet add package Optimizely.Performance.DotNetCounters
+dotnet add package Reignite.Optimizely.DotNetCounters
 ```
 
 2. The initialization module will automatically register on application startup.
@@ -114,7 +116,7 @@ Add the following to your `web.config`:
   <configSections>
     <sectionGroup name="optimizely">
       <section name="performanceCounters"
-               type="Optimizely.Performance.DotNetCounters.Services.PerformanceCountersConfigSection, Optimizely.Performance.DotNetCounters" />
+               type="Reignite.Optimizely.DotNetCounters.Services.PerformanceCountersConfigSection, Reignite.Optimizely.DotNetCounters" />
     </sectionGroup>
   </configSections>
 
@@ -267,14 +269,14 @@ customMetrics
 
 1. Ensure the Application Pool identity has permissions to read performance counters
 2. Verify the performance counter names are correct (use Performance Monitor to browse available counters)
-3. Check your site's log for messages from `Optimizely.Performance.DotNetCounters` — the module logs one `Information` line on successful start and an `Error` with the exception if initialization fails (log4net on V11)
+3. Check your site's log for messages from `Reignite.Optimizely.DotNetCounters` — the module logs one `Information` line on successful start and an `Error` with the exception if initialization fails (log4net on V11)
 
 ### .NET Core: Event Counters Not Collecting
 
 1. Ensure `Microsoft.ApplicationInsights.AspNetCore` package is installed
 2. Verify the Application Insights connection string is correct
 3. Check that the event source names and counter names are spelled correctly
-4. Review your site's log for messages from `Optimizely.Performance.DotNetCounters` — the module logs one `Information` line on successful start and an `Error` with the exception if initialization fails
+4. Review your site's log for messages from `Reignite.Optimizely.DotNetCounters` — the module logs one `Information` line on successful start and an `Error` with the exception if initialization fails
 
 ### Disabling Counter Collection
 
@@ -299,11 +301,16 @@ The performance impact of this library is minimal:
 
 ## License
 
-Apache-2.0
+Apache-2.0 — see [LICENSE](LICENSE) and [NOTICE](NOTICE). Copyright (c) Reignite Software Performance.
 
 ## Support
 
-For issues and feature requests, please use the GitHub issue tracker.
+For issues and feature requests, please use the [GitHub issue tracker](https://github.com/Reignite-Software-Performance/Reignite.Optimizely.DotNetCounters/issues).
+
+For help interpreting what these counters are telling you, or for Optimizely performance work:
+
+- https://reigniteperformance.com/Optimizely
+- https://reigniteperformance.com/contact
 
 ## Examples
 

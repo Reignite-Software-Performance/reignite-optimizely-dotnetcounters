@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Optimizely.Performance.DotNetCounters.Configuration
+namespace Reignite.Optimizely.DotNetCounters.Configuration
 {
     /// <summary>
     /// Provides recommended configuration presets for different scenarios and Optimizely CMS versions.

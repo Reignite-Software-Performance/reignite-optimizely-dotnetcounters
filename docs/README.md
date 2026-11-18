@@ -1,6 +1,6 @@
 # Documentation
 
-This directory contains comprehensive documentation for the Optimizely.Performance.DotNetCounters library.
+This directory contains comprehensive documentation for the Reignite.Optimizely.DotNetCounters library.
 
 ## Getting Started
 

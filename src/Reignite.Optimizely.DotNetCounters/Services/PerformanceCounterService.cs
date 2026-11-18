@@ -7,9 +7,9 @@ using EPiServer.Logging;
 using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector;
 using Microsoft.Extensions.Configuration;
-using Optimizely.Performance.DotNetCounters.Configuration;
+using Reignite.Optimizely.DotNetCounters.Configuration;
 
-namespace Optimizely.Performance.DotNetCounters.Services
+namespace Reignite.Optimizely.DotNetCounters.Services
 {
     /// <summary>
     /// Service for initializing Windows Performance Counters on .NET Framework.
