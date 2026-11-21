@@ -1,0 +1,88 @@
+name: Publish to NuGet
+
+# Trusted publishing: no long-lived API key exists anywhere. The NuGet/login step exchanges a
+# GitHub OIDC token for a short-lived key scoped to the policy configured on nuget.org, which
+# names THIS repository and THIS file (publish.yml) and the environment below. Change any of
+# the three and the exchange fails.
+#
+# Deliberately separate from ci.yml: that file runs on every pull request, and a policy pointed
+# at it would let any PR run mint a publishing key.
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      push:
+        description: 'Push to nuget.org (unchecked = build, pack and verify only)'
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write   # required for the OIDC token exchange
+  contents: read
+
+env:
+  # The package ids this run must produce. A missing one fails the run BEFORE anything is
+  # pushed, because a glob that matches nothing can otherwise report success.
+  EXPECTED_PACKAGES: Reignite.Optimizely.DotNetCounters
+
+jobs:
+  publish:
+    runs-on: windows-latest   # net472 needs the .NET Framework targeting pack
+    environment: nuget        # must equal the Environment on the nuget.org policy
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore Reignite.Optimizely.DotNetCounters.sln
+
+      - name: Test
+        run: dotnet test Reignite.Optimizely.DotNetCounters.sln -c Release --no-restore
+
+      - name: Pack
+        run: dotnet pack Reignite.Optimizely.DotNetCounters.sln -c Release -o ./nupkg
+
+      - name: Verify the expected packages were produced
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=(nupkg/*.nupkg)
+          echo "Packed ${#files[@]} file(s):"
+          printf '  %s\n' "${files[@]}"
+          for id in $EXPECTED_PACKAGES; do
+            match=("nupkg/${id}."*.nupkg)
+            if [ ${#match[@]} -ne 1 ]; then
+              echo "::error::expected exactly one ${id} package, found ${#match[@]}"
+              exit 1
+            fi
+            echo "  ok: ${match[0]}"
+          done
+
+      - name: NuGet login (OIDC)
+        if: github.event_name == 'push' || inputs.push
+        id: login
+        uses: NuGet/login@v1
+        with:
+          user: ${{ vars.NUGET_USER }}   # nuget.org username; must equal the policy owner
+
+      - name: Push
+        if: github.event_name == 'push' || inputs.push
+        shell: bash
+        env:
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for f in nupkg/*.nupkg; do
+            echo "Pushing $f"
+            dotnet nuget push "$f" \
+              --api-key "$NUGET_API_KEY" \
+              --source https://api.nuget.org/v3/index.json \
+              --skip-duplicate
+          done

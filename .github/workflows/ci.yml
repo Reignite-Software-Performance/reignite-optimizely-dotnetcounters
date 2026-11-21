@@ -27,7 +27,10 @@ jobs:
       - name: Build net472 (Optimizely V11)
         if: matrix.config == 'net472'
         run: |
-          msbuild Reignite.Optimizely.DotNetCounters.sln /p:Configuration=Release /p:TargetFramework=net472
+          # msbuild is not on PATH on GitHub-hosted runners (it lives inside the VS Build Tools
+          # instance, reachable only through vswhere), so this step failed on every run. The .NET
+          # SDK can build net472 directly when the targeting pack is installed, which it is.
+          dotnet build Reignite.Optimizely.DotNetCounters.sln -c Release -f net472
 
       - name: Build net6.0 (Optimizely V12)
         if: matrix.config == 'net6.0'
