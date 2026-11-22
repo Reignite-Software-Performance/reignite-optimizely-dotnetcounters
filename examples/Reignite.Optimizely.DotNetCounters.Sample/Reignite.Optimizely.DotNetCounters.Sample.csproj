@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Reignite.Optimizely.DotNetCounters.Sample</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- ProjectReference rather than PackageReference so the sample always exercises the code in
+         this repository, including before the package reaches nuget.org. -->
+    <ProjectReference Include="..\..\src\Reignite.Optimizely.DotNetCounters\Reignite.Optimizely.DotNetCounters.csproj" />
+  </ItemGroup>
+
+</Project>
