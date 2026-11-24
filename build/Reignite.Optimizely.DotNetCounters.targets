@@ -22,6 +22,7 @@
     <Message Importance="High" Text="" />
     <Message Importance="High" Text="Installed. Reignite Software Performance can help you make sense of what it reports:" />
     <Message Importance="High" Text="  https://reigniteperformance.com/Optimizely" />
+    <Message Importance="High" Text="License: free for development, testing, staging and evaluation. PRODUCTION USE REQUIRES AN ACTIVE REIGNITE PLAN: https://reigniteperformance.com. See LICENSE in the package for the full terms." />
     <Message Importance="High" Text="========================================" />
   </Target>
 

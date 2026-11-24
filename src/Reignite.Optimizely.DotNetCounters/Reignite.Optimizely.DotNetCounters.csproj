@@ -9,14 +9,22 @@
     <Authors>Reignite Software Performance</Authors>
     <Company>Reignite Software Performance</Company>
     <Product>Reignite Optimizely Performance Counters</Product>
-    <Copyright>Copyright (c) Reignite Software Performance</Copyright>
+    <Copyright>Copyright (c) Reignite Software Performance. All rights reserved.</Copyright>
     <Description>.NET runtime and ASP.NET performance counters for Optimizely CMS V11, V12 and V13, delivered to Application Insights with no code changes. By Reignite Software Performance - https://reigniteperformance.com/Optimizely</Description>
     <PackageProjectUrl>https://reigniteperformance.com/Optimizely</PackageProjectUrl>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <!--
+      A custom license file, not an SPDX expression: the Reignite Source-Available License allows
+      free development, test, staging and evaluation use but requires an active Reignite plan for
+      production. PackageLicenseFile and PackageLicenseExpression are mutually exclusive. The file
+      is packed below so nuget.org renders it; PackageRequireLicenseAcceptance makes Visual Studio
+      show the acceptance dialog when the package is installed.
+    -->
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <NoWarn>$(NoWarn);NU1603;NU1605</NoWarn>
-    <Version>1.0.0</Version>
-    <PackageVersion>1.0.0</PackageVersion>
+    <Version>1.1.0</Version>
+    <PackageVersion>1.1.0</PackageVersion>
     <PackageTags>optimizely;episerver;performance;counters;monitoring;application-insights;telemetry;reignite</PackageTags>
     <RepositoryUrl>https://github.com/Reignite-Software-Performance/reignite-optimizely-dotnetcounters</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

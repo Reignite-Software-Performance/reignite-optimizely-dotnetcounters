@@ -120,3 +120,8 @@ Write-Host ""
 Write-Host "Installed. Reignite Software Performance can help you make sense of what it reports:" -ForegroundColor Green
 Write-Host "  https://reigniteperformance.com/Optimizely" -ForegroundColor Green
 Write-Host ""
+Write-Host "License: free for development, testing, staging, and evaluation." -ForegroundColor Yellow
+Write-Host "PRODUCTION USE REQUIRES AN ACTIVE REIGNITE PLAN:" -ForegroundColor Yellow
+Write-Host "  https://reigniteperformance.com" -ForegroundColor Yellow
+Write-Host "See LICENSE in the package for the full terms." -ForegroundColor Yellow
+Write-Host ""
