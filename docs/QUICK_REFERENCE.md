@@ -153,5 +153,5 @@ customMetrics
 
 ---
 
-**License**: Apache-2.0  
-**Version**: 1.0.0
+**License**: Reignite Source-Available License 1.0 (production requires a Reignite plan)  
+**Version**: 1.1.0

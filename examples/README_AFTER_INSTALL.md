@@ -208,11 +208,16 @@ customMetrics
 
 ---
 
-**Version**: 1.0.0  
-**License**: Apache-2.0, Copyright (c) Reignite Software Performance
+**Version**: 1.1.0  
+**License**: Reignite Source-Available License 1.0, Copyright (c) Reignite Software Performance. All rights reserved.
 
 ---
 
-**Installed.** Reignite Software Performance builds and maintains this package, and it is free to use.
-If you would rather have someone read the charts with you — or instrument a site that cannot take a
-package — see https://reigniteperformance.com/Optimizely or https://reigniteperformance.com/contact.
+**Installed.** Reignite Software Performance builds and maintains this package.
+
+**Free for development, testing, staging, and evaluation. Production use requires an active Reignite
+plan** — a Production Environment is any live site, application, or service used by end users,
+customers, or real business transactions. See `LICENSE` in the package for the full terms, or get a
+plan at https://reigniteperformance.com. If you would rather have someone read the charts with you —
+or instrument a site that cannot take a package — see https://reigniteperformance.com/Optimizely or
+https://reigniteperformance.com/contact.
