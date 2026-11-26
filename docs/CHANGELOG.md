@@ -69,7 +69,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Package Information
 - **Package ID**: Reignite.Optimizely.DotNetCounters
-- **License**: Apache-2.0
+- **License**: Reignite Source-Available License 1.0 (production requires a Reignite plan)
 - **Target Frameworks**: net472, net6.0, net8.0
 - **Dependencies**: Microsoft.ApplicationInsights, Optimizely packages
 
@@ -129,6 +129,10 @@ Simply install the package and add Application Insights configuration. The libra
 
 ## License
 
-Copyright © 2026 Optimizely
+Copyright (c) Reignite Software Performance. All rights reserved.
 
-Licensed under the Apache License, Version 2.0. See LICENSE file for details.
+Distributed under the Reignite Source-Available License 1.0 — see LICENSE. Free for development,
+testing, staging and evaluation; production use requires an active Reignite plan.
+
+Earlier releases were published under the Apache License, Version 2.0 and remain available under
+that license to anyone who received them.

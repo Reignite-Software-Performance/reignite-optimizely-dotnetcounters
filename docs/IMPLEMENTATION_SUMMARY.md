@@ -7,7 +7,7 @@ This document provides a complete overview of the Reignite.Optimizely.DotNetCoun
 **Namespace**: `Reignite.Optimizely.DotNetCounters`  
 **Target Platforms**: .NET Framework 4.7.2, .NET 6, .NET 8  
 **Optimizely Versions**: V11, V12, V13  
-**License**: Apache-2.0
+**License**: Reignite Source-Available License 1.0 (production requires a Reignite plan)
 
 ## Objectives Achieved
 

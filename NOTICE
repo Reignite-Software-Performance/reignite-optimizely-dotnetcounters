@@ -1,23 +1,32 @@
 Reignite.Optimizely.DotNetCounters
-Copyright (c) Reignite Software Performance
+Copyright (c) Reignite Software Performance. All rights reserved.
 https://reigniteperformance.com/Optimizely
+
+This release is distributed under the Reignite Source-Available License 1.0
+(see LICENSE). Development, testing, staging, and evaluation are free.
+PRODUCTION USE REQUIRES AN ACTIVE REIGNITE PLAN:
+https://reigniteperformance.com
 
 This product includes software derived from Optimizely.Performance.DotNetCounters
 (https://github.com/jeff-fischer-optimizely/Optimizely.Performance.DotNetCounters),
-which was published under the Apache License, Version 2.0. The original copyright
-and license notices are retained below.
+which was published under the Apache License, Version 2.0. Reignite owns the
+copyright in that original work and in this derivative. The original
+attribution notices are retained below.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Upstream attribution:
+  Optimizely.Performance.DotNetCounters
+  Licensed under the Apache License, Version 2.0
+  http://www.apache.org/licenses/LICENSE-2.0
 
-    http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the Apache License, Version 2.0 is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+  or implied. See the Apache License, Version 2.0 for the specific language
+  governing permissions and limitations under that license.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Releases of this package previously published under the Apache License, Version
+2.0 remain available under that license to anyone who received them. This
+release is not distributed under Apache-2.0.
 
 Optimizely and EPiServer are trademarks of Optimizely, Inc. This package is an
 independent product of Reignite Software Performance and is not published,
